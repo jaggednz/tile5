@@ -111,6 +111,14 @@
                 targetFps: 25
             },
             
+            chrome: {
+              name: "CHROME",
+              regex: /Chrome/i,
+              
+              /* Seems that Chrome says it supports touch even if no touch input device is present. */  
+              supportsTouch: false
+            },
+            
             ipod: {
                 name: "iPod Touch",
                 regex: /ipod/i,
@@ -169,6 +177,7 @@
             deviceConfigs.ipod,
             deviceConfigs.iphone,
             deviceConfigs.ipad,
+            deviceConfigs.chrome,
             deviceConfigs.ie
         ];
     } // loadDeviceConfigs
